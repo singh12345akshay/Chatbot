@@ -1,39 +1,9 @@
 trigger:
-- develop
-
-
-resources:
-- repo: self
-
-
-
-stages:
-- stage: Build
-  displayName: Build and push stage
-  jobs:  
-  - job: Build
-    displayName: Build
-    pool:
-      vmImage: $(vmImageName)
-    steps:
-    - task: Docker@2
-      displayName: Build and push an image to container registry
-      inputs:
-        command: buildAndPush
-        repository: $(imageRepository)
-        dockerfile: $(dockerfilePath)
-        containerRegistry: $(dockerRegistryServiceConnection)
-        tags: |
-          $(tag)
-          latest
-
-trigger:
   - develop
 
 resources:
 - repo: self
 
-variables:
 variables:
   dockerRegistryServiceConnection: 'mindpath-acr-dev'
   imageRepository: 'chatbot-site-v2'
@@ -48,7 +18,8 @@ stages:
   jobs:
     - job: Build
       displayName: Build
-      vmImage: $(vmImageName)
+      pool:
+        vmImage: $(vmImageName)
       steps:
         - task: Docker@2
           displayName: Build and push an image to azure container registry
