@@ -3,5 +3,6 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
 RUN npm install
-EXPOSE 80
-CMD ["npm", "run", "prod"]
+RUN npm run build
+EXPOSE 3000
+CMD ["sh","start.sh"]
