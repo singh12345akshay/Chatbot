@@ -6,14 +6,11 @@ resources:
 - repo: self
 
 variables:
-  # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'chatbot-service-connections-for-chatbote-AR'
+  dockerRegistryServiceConnection: 'mindpath-acr-dev'
   imageRepository: 'chatbot-site-v2'
   containerRegistry: 'mindpathregistrydev.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
-  
-  # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
 stages:
