@@ -1,0 +1,505 @@
+{
+    "bots":
+    [
+      {
+        "id": "5df0d0ae1c9d4400008d957a",
+        "type":"webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "5df0d0b91c9d4400008d957b",
+        "type": "signup",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "5df0d03a1c9d4400008d9573",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "5df0d0d81c9d4400008d957e",
+        "type": "customerRequest",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "5df0d0f31c9d4400008d9580",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "5dfa0660ca922b6a02e0e395",
+        "type": "webBot",
+        "imagesrc": "/images/laptoprepair.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/laptop-repair-bot/main.js"
+      },
+      {
+        "id": "5e5cbfbd085bb5f897045db7",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/appointment/appointment-booking/main.js"
+      },
+      {
+        "id": "5eccb746f42290729beabd28",
+        "type": "webBot",
+        "imagesrc": "/images/hawaii.jpg",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "5eccc4ecf42290729becddfe",
+        "type": "webBot",
+        "imagesrc": "/images/florida.jpg",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "5f22d5143df41341362e9bf0",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/ECNUI/main.js"
+      },
+      {
+        "id": "5f4dde061aca42d0c08114ad",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/travel-booking/main.js"
+      },
+      {
+        "id": "5f575b6d1aca42d0c0dfeca2",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "5f58e6691aca42d0c02aedae",
+        "type": "facebookBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "5fa3e9a0cdb854832f48b0b1",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/technical/green-shields/main.js"
+      },
+      {
+        "id": "5f9c0167cdb854832f0940a5",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/mindpathtech/dental-clinic/main.js"
+      },
+      {
+        "id": "5face042cdb854832fb09649",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "5fb7d5f6cdb854832f979454",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "5ff7f9d2e50bb533f8dccfff",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "60224d312f17399b7f5a1c3d",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/EbotifyNew/ebotify-web/main.js"
+      },
+      {
+        "id": "603e24bbcbeca347c7bb30dc",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/bavard/bavard/main.js"
+      },
+      {
+        "id": "60476821cbeca347c7a107e6",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "6075921708f5fc9f73b8967a",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "6075925808f5fc9f73b8a938",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "5f58e6691aca42d0c02aedae",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "60866c2cc616241b5657dece",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "60a754f36ecda7cb054419b9",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "60a8e4fd6ecda7cb05c04818",
+        "type": "whatsappBot",
+        "imagesrc": "",
+        "botscript": "https://api.whatsapp.com/send?phone=447785948933&text=@join@%20sigma-bot"
+      },
+      {
+        "id": "60a8e5416ecda7cb05c05d00",
+        "type": "facebookBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "60c22557bb5a3a5e222a516d",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "60c34cf3bb5a3a5e22768a17",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "60ccaf40bb5a3a5e22eb7193",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "60ddc0ac4895cb37bc1b0613",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/mindpathtech/ecommerce-demo/main.js"
+      },
+      {
+        "id": "60e7d3ad4895cb37bc03ee10",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/mindpathtech/salon-demo/main.js"
+      },
+      {
+        "id": "60ec2f6f4895cb37bc426d0c",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "60ec2f534895cb37bc42667a",
+        "type": "whatsappBot",
+        "imagesrc": "",
+        "botscript": "https://api.whatsapp.com/send?phone=447785948933&text=@join@%20meraqui"
+      },
+      {
+        "id": "60ec2f874895cb37bc4272d9",
+        "type": "telegramBot",
+        "imagesrc": "",
+        "botscript": "https://t.me/DrFixitBot"
+      },
+      {
+        "id": "60eedb514895cb37bc60d26f",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/mindpathtech/viable-demo-web/main.js"
+      },
+      {
+        "id": "60eedb764895cb37bc60da8f",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/mindpathtech/arabic-bot/main.js"
+      },
+      {
+        "id": "6104da72709838bb7f06faa2",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "61056afa709838bb7f47ec6f",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/mindpathtech/mg-motors/main.js"
+      },
+      {
+        "id": "6113968f2b17ac4aa1380f8f",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/munchbox/munchbox/main.js"
+      },
+      {
+        "id": "612f815fa74510b976b16a55",
+        "type": "webBot",
+        "imagesrc": "/images/cannachat.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/canachat/cannachat/main.js"
+      },
+      {
+        "id": "614040728d6c0c63e119b932",
+        "type": "webBot",
+        "imagesrc": "/images/cannachat.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/cannachat/cannachat-dev/main.js"
+      },
+      {
+        "id": "615eafa45b8b5e34dbd7a1fe",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/photo-lab/photolab-dev/main.js"
+      },
+      {
+        "id": "618b79c87367a62e2e99907b",
+        "type": "webBot",
+        "imagesrc": "/images/hobbledown.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/hobbledown/hobbledown/main.js"
+      },
+      {
+        "id": "618cef8d7367a62e2eed882e",
+        "type": "webBot",
+        "imagesrc": "/images/hobbledown.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/hobbledown/hobbleDown-dev/main.js"
+      },
+      {
+        "id": "61977b2d7367a62e2e45e578",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/munchbox/munchbox/main.js"
+      },
+      {
+        "id": "61a0a5e17367a62e2e3a6df1",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/coop-taxi-sms/coop-taxi-booking/main.js"
+      },
+      {
+        "id": "61a606e17367a62e2e55e96c",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/goldify/Goldify/main.js"
+      },
+      {
+        "id": "61b1c40810741fb6456153a4",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/goldify-dev/goldify/main.js"
+      },
+      {
+        "id": "61c59cc79fba77ce0a60f924",
+        "type": "webBot",
+        "imagesrc": "/images/heathBackground.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/hobbledown/hobbledown-heath/main.js"
+      },
+      {
+        "id": "61d971579fba77ce0adf20b1",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "61e6e00b4f93f684e24449cb",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/cbdchat/cbd-chat/main.js"
+      },
+      {
+        "id": "61e805474f93f684e280266c",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "61f3b5227994b4dd0883c3fd",
+        "type": "webBot",
+        "imagesrc": "/images/hobbledown.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/mindpathtech/knowlede-base/main.js"
+      },
+      {
+        "id": "6201212ad04c90ed3da47699",
+        "type": "webBot",
+        "imagesrc": "/images/nicorette.jpg",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/nicorette/nicorette/main.js"
+      },
+      {
+        "id": "621dfda442130a1cfb8dbbc3",
+        "type": "webBot",
+        "imagesrc": "/images/hobbledown.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/hobbledown/hobbledown-heath-dev/main.js"
+      },
+      {
+        "id": "623dc3692544c9f6766bf5fb",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "626644a2b0b1abd0780cc66d",
+        "type": "webBot",
+        "imagesrc": "/images/casino.jpg",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/goa-championship/goa-championship/main.js"
+      },
+      {
+        "id": "62691be86ef8832031de00c5",
+        "type": "webBot",
+        "imagesrc": "/images/casino.jpg",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/cassino-championship/goa-championship/main.js"
+      },
+      {
+        "id": "62b2da7eca93b83fdca6b4e8",
+        "type": "webBot",
+        "imagesrc": "/images/kidspace.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/hobbledown/kidspace-croydon/main.js"
+      },
+      {
+        "id": "62bd54dce42e559115de2f7e",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/ebotifynew/recruiter/main.js"
+      },
+      {
+        "id": "62d55264e42e55911550996e",
+        "type": "webBot",
+        "imagesrc": "/images/Igbot.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/ig-beauty/ig-beauty-bot/main.js"
+      },
+      {
+        "id": "62e0c551802943985848ce6d",
+        "type": "webBot",
+        "imagesrc": "/images/trinity.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/trinity-e-bike/trinity-e-bike-bot/main.js"
+      },
+      {
+        "id": "62ea519782a0abf1748807d7",
+        "type": "webBot",
+        "imagesrc": "/images/amaleaduniversity.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/amalead-university/amalead-university/main.js"
+      },
+      {
+        "id": "62f353519bc55cbb882e28f6",
+        "type": "webBot",
+        "imagesrc": "/images/prime-array.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/prime-array-prod/prime-array/main.js"
+      },
+      {
+        "id": "62f39d4098177ad2cc48af23",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "62fb2dd7293520528c2d3469",
+        "type": "webBot",
+        "imagesrc": "/images/prime-array.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/prime-array/prime-array/main.js"
+      },
+      {
+        "id": "6307292b7383d1e20e5eef2e",
+        "type": "webBot",
+        "imagesrc": "/images/KcProgressive.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/kc-Progressive/kc-Progressive-dev/main.js"
+      },
+      {
+        "id": "6309e576f080c6459fb7fd2b",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech.blob.core.windows.net/chatbot/ebotifynew/bavard/main.js"
+      },
+      {
+        "id": "632ae67167d7f80072d32387",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech.blob.core.windows.net/chatbot/ebotifynew/bavard-hobbledown/main.js"
+      },
+      {
+        "id": "636ca2dede0ee4f634491993",
+        "type": "webBot",
+        "imagesrc": "/images/commonBot.jpg",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/EbotifyNew/ebotify-web/main.js"
+      },
+      {
+        "id": "637287ec3f7cea1a50f3a8ee",
+        "type": "webBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/E-commerce/E-commerce-demo/main.js"
+      },
+      {
+        "id": "637e065a1375b758766f7df4",
+        "type": "webBot",
+        "imagesrc": "/images/kidspace.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/hobbledown/kidspace-romford-dev/main.js"
+      },
+      {
+        "id": "63a18d58b1564b9f0c8355d0",
+        "type": "webBot",
+        "imagesrc": "/images/mindpath.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/mindpath/mindpath/main.js"
+      },
+      {
+        "id": "63ac26ddeac40bb8ebd4d4ab",
+        "type": "webBot",
+        "imagesrc": "/images/Igbot.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/Dummy-Next-js-bot/main.js"
+      },
+      {
+        "id": "63beb503bcf222ba5ee22505",
+        "type": "webBot",
+        "imagesrc": "/images/gigcx-marketplace.png",
+        "botscript": "https://mindpathtech.blob.core.windows.net/chatbot/gigcx-marketplace/gigcx-marketplace/main.js"
+      },
+      {
+        "id": "63d7a636171d1aaaf42cc3c3",
+        "type": "facebookBot",
+        "imagesrc": "",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "63ea44a1171d1aaaf4c51226",
+        "type": "webBot",
+        "imagesrc": "/images/commonBot.jpg",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/Chatgpt-demo/Chatgpt-demo/main.js"
+      },
+      {
+        "id": "64070b630c9b2d8044fbf3f1",
+        "type": "webBot",
+        "imagesrc": "/images/morganrandall.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/estate-bot/main.js"
+      },
+      {
+        "id": "6438e8174a9a84bbaf6366bd",
+        "type": "webBot",
+        "imagesrc": "/images/asterDigital.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/aster/aster-digital/main.js"
+      },
+      {
+        "id": "647de1d039a1d532e87fc02c",
+        "type": "webBot",
+        "imagesrc": "/images/watermouthBot.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/watermouth-prod/main.js"
+      },
+      {
+        "id": "648168c4402cf1ceb6da0ace",
+        "type": "webBot",
+        "imagesrc": "/images/apk-hospital.png",
+        "botscript": "https://mindpathtech-cdn.azureedge.net/chatbot/apk-hospital/main.js"
+      }
+    ]
+}
+
+

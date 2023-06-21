@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/assets": ["assets", "assets/*"],
+      "@/components": ["components", "components/*"],
+      "@/constants": ["constants", "constants/*"],
+      "@/context": ["context", "context/*"],
+      "@/redux": ["datastore", "datastore/*"],
+      "@/enum": ["enum", "enum/*"],
+      "@/helpers": ["helpers", "helpers/*"],
+      "@/hooks": ["hooks", "hooks/*"],
+      "@/interfaces": ["interfaces", "interfaces/*"],
+      "@/layouts": ["layouts", "layouts/*"],
+      "@/library": ["library", "library/*"],
+      "@/locales": ["locales", "locales/*"],
+      "@/pages": ["pages", "pages/*"],
+      "@/services": ["services", "services/*"],
+      "@/styles": ["styles", "styles/*"],
+      "@/theme": ["theme", "theme/*"],
+      "@/types": ["types", "types/*"],
+      "@/util": ["util", "util/*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.d.ts",
+    "**/*.json",
+    "next.config.js",
+    "src/pages/chat/conversations/config/events.ts",
+    "loader.page.js"
+  ],
+  "exclude": ["node_modules"]
+}
