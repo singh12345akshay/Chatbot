@@ -5,13 +5,7 @@ trigger:
 resources:
 - repo: self
 
-variables:
-  dockerRegistryServiceConnection: 'mindpath-acr-dev'
-  imageRepository: 'chatbot-site-v2'
-  containerRegistry: 'mindpathregistrydev.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  tag: '$(Build.BuildId)'
-  vmImageName: 'ubuntu-latest'
+
 
 stages:
 - stage: Build
@@ -32,3 +26,66 @@ stages:
         tags: |
           $(tag)
           latest
+
+trigger:
+  - develop
+
+resources:
+- repo: self
+
+variables:
+variables:
+  dockerRegistryServiceConnection: 'mindpath-acr-dev'
+  imageRepository: 'chatbot-site-v2'
+  containerRegistry: 'mindpathregistrydev.azurecr.io'
+  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
+  tag: '$(Build.BuildId)'
+  vmImageName: 'ubuntu-latest'
+
+stages:
+- stage: Build
+  displayName: Build and push stage
+  jobs:
+    - job: Build
+      displayName: Build
+      vmImage: $(vmImageName)
+      steps:
+        - task: Docker@2
+          displayName: Build and push an image to azure container registry
+          inputs:
+              command: buildAndPush
+              repository: $(imageRepository)
+              dockerfile: $(dockerfilePath)
+              containerRegistry: $(dockerRegistryServiceConnection)
+              tags: |
+                  $(tag)
+                  latest
+
+- stage: Dev
+  displayName: Deploy To Dev
+  variables:
+    - group: Common
+    - group: chatbotapps-Dev
+  dependsOn: Build
+  condition: succeeded()
+  jobs:
+    - deployment: Deploy
+      environment: "Dev"
+      pool: $(AgentPool)
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+                - task: SSH@0
+                  inputs:
+                    sshEndpoint: 'ssh-to-dev-k8s'
+                    runOptions: 'inline'
+                    inline: |
+                      echo "===============Updating Deployments================"
+                        kubectl set image deployment/chatbotapps-v2 chatbotapps-v2=$(ACR_DEV)/$(IMAGE):$(Build.BuildId)
+                          
+                      printf "#################UPDATING OR ADDING  VARIABLE######"
+                        kubectl set env deployment/chatbotapps-v2 DB_URL='$(DB_URL)' JWT_SECRET_KEY=$(JWT_SECRET_KEY) REACT_APP_API_BASEURL='$(REACT_APP_API_BASEURL)' REACT_APP_API_URL='$(REACT_APP_API_URL)'
+                      printf "###############List All Environment################"
+                        kubectl set env deployment/chatbotapps-v2 --list
+                    readyTimeout: '20000'
