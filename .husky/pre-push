@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm run test
+npm run build
+
+textreset=$(tput sgr0) # reset the foreground colour
+yellow=$(tput setaf 3)
+green=$(tput setaf 2)
+red=$(tput setaf 9)
+
+echo "${red}■ ${green}=============================================================================== ${red}■"
+echo " "
+echo " "
+echo " "
+echo "                            ${yellow}✽ ${green}Build Successfull ✅ ${yellow}✽${textreset}"
+echo " "
+echo " "
+echo "                       ${green}Code can be now be Pushed to Repository. 😉${textreset}"
+echo " "
+echo " "
+echo "${red}■ ${green}=============================================================================== ${red}■${textreset}"

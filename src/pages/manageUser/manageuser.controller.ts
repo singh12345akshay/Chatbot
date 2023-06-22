@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useSnackbar } from "notistack";
 import { useState } from "react";
-import { RegexLibrary } from "../Regex";
+import { RegexLibrary } from "../../library/Regex";
 
 export default function ManageuserController() {
   const [email, setEmail] = useState({
