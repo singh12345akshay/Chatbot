@@ -136,7 +136,7 @@ export default function Home() {
                     gutterBottom
                     variant="h6"
                     style={{ fontWeight: 700 }}>
-                    No result for "{searchText}"
+                    No result for &quot;{searchText}&quot;
                   </Typography>
                 </SearchNotfoundWrapper>
               )}

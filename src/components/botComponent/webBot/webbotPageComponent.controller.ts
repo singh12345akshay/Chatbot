@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useTheme } from "@mui/material";
 
 import botDetail from "../../../assets/botDetail.json";
+
 import {
   image1,
   image2,

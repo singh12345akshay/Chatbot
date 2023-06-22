@@ -32,13 +32,14 @@ export default function AuthProvider({ children }: AuthproviderProps) {
       router.push("/home");
     }
   };
+  
   useEffect(() => {
     checkAuthtoken();
     setTimeout(() => {
       setIsLoading(false);
     }, 1500);
   }, [router]);
-  
+
   if (isLoading) {
     return (
       <Box

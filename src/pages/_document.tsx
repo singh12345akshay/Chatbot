@@ -9,12 +9,12 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <script
+        <Script
           type="text/javascript"
-          src="https://mindpathtech-cdn.azureedge.net/chatbot/jquery.js"></script>
-        <script
+          src="https://mindpathtech-cdn.azureedge.net/chatbot/jquery.js"></Script>
+        <Script
           type="text/javascript"
-          src="https://mindpathtech-cdn.azureedge.net/chatbot/webchat.js"></script>
+          src="https://mindpathtech-cdn.azureedge.net/chatbot/webchat.js"></Script>
         
       </body>
     </Html>

@@ -70,9 +70,7 @@ export default function ManageuserController() {
         value: "",
         isValid: true,
       });
-    } catch (response) {
-      console.log("response:", response.response.data.message);
-      // console.error("Error logging in", error);
+    } catch (response:any) {
       enqueueSnackbar(response.response.data.message, {
         variant: "error",
         autoHideDuration: 1500,

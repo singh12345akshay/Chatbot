@@ -13,7 +13,7 @@ export default function HomeController() {
   const [bot, setBot] = useState<apiResponse>([]);
   const router = useRouter();
   const [searchText, setSearchText] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState<Idata []>([]);
   const [loading, setLoading] = useState(true);
 
   const fetchData = async () => {

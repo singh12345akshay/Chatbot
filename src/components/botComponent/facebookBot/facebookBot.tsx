@@ -3,7 +3,6 @@ import { FacebookProvider, CustomChat } from "react-facebook";
 import Image from "next/image";
 import { Typography, Box, useTheme } from "@mui/material";
 
-import botDetail from "../../../assets/botDetail.json";
 import {
   image1,
   image2,
@@ -12,6 +11,8 @@ import {
   image5,
   image6,
 } from "src/assets/bgImages";
+
+import botDetail from "../../../assets/botDetail.json";
 import { BotTitle, BackgroundImageWrapper } from "../botComponent.style";
 
 interface Iprops {
@@ -47,7 +48,7 @@ export default function FacebookBot(props: Iprops) {
         setBotName(desiredObj.name);
       }
     }
-  }, []);
+  }, [key]);
 
   useEffect(() => {
     const obj = bots.find((obj: Ibot) => obj.id === key);
@@ -65,7 +66,7 @@ export default function FacebookBot(props: Iprops) {
       {bot && (
         <BackgroundImageWrapper>
           <Image
-            src={bot.imagesrc === "" ? getRandomImage() : bot.imagesrc}
+            src={bot.imagesrc  ? getRandomImage() : bot.imagesrc}
             alt="image"
             fill={true}
           />

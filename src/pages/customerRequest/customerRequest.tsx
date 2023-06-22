@@ -26,7 +26,8 @@ import {
   styled,
   tableCellClasses,
   Tooltip,
-  useMediaQuery
+  useMediaQuery,
+  SelectChangeEvent
 } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -48,8 +49,6 @@ import {nodatafound} from "../../assets/images";
 import { StyledIconButton, StyledTableCell, CustomEditAddReqDialog, CustomDeleteDialog } from "./cutomerRequest.style";
 
 
-
-
 interface IapiResponse {
   status: string;
   _id: string;
@@ -68,6 +67,15 @@ interface TablePaginationActionsProps {
   ) => void;
 }
 
+interface IUpdateRequest{
+  id:string;
+  description:string;
+  status:string;
+}
+interface IRequestData{
+  description:string;
+  status:string;
+}
 function TablePaginationActions(props: TablePaginationActionsProps): JSX.Element {
   const theme = useTheme();
   const { count, page, rowsPerPage, onPageChange } = props;
@@ -137,7 +145,7 @@ export default function CustomerRequest() {
     description:"",
     status:""
    })
-  const [requestDetails, setRequestDetails] = useState({
+  const [requestDetails, setRequestDetails] = useState<IUpdateRequest>({
     id: "",
     description: "",
     status: "",
@@ -166,7 +174,7 @@ const handleAdd=()=>{
       status: addRequestDetails.status,
     });
   }
-    const handleAddStatusChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const handleAddStatusChange = (event:SelectChangeEvent<string>) => {
       setAddRequestDetails({
         description: addRequestDetails.description,
         status: event.target.value,
@@ -193,7 +201,7 @@ const handleAdd=()=>{
         status: requestDetails.status,
       });
     };
-    const handleStatusChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const handleStatusChange = (event: SelectChangeEvent<string>) => {
       setRequestDetails({
         id: requestDetails.id,
         description: requestDetails.description,
@@ -239,8 +247,7 @@ const autoPageChange=async ()=>{
     }
   }
 }
-  const addRequest = async (data) => {
-      
+  const addRequest = async (data:IRequestData) => {
       const payload = {
         description: data.description,
         status: data.status,
@@ -283,7 +290,8 @@ const autoPageChange=async ()=>{
         setDialogOpen(false)
       }
     }
-    const editRequest = async (data: IapiResponse) => {
+    const editRequest = async (data: IUpdateRequest) => {
+      
       const payload = {
         description: data.description,
         status: data.status,
@@ -304,7 +312,6 @@ const autoPageChange=async ()=>{
             body: JSON.stringify(payload),
           }
         );
-        console.log(response);
         if (response.ok) {
           fetchData();
           enqueueSnackbar("Request Updated successfully ", {
@@ -332,8 +339,8 @@ const autoPageChange=async ()=>{
     };
 
     const deleteRequest = async (data:IapiResponse | ApiResponseArray) => {
-      const payload = {
-        requestIdList: [],
+      const payload :{requestIdList:Array<string>} = {
+        requestIdList:[],
       };
       if(Array.isArray(data)){
         data.forEach((data) => {
@@ -548,6 +555,7 @@ const autoPageChange=async ()=>{
                             </Button>
                           </Tooltip>
                           <Tooltip title="Delete" arrow followCursor>
+                            
                             <Button
                               style={buttonstyle}
                               onClick={() => {
@@ -686,6 +694,7 @@ const autoPageChange=async ()=>{
                   color="success"
                   onClick={() => {
                     addRequest(addRequestDetails);
+
                   }}
                   sx={{
                     fontWeight: "700",
@@ -740,7 +749,7 @@ const autoPageChange=async ()=>{
               <Button
                 variant="contained"
                 onClick={async () => {
-                  await deleteRequest(selectedItem);
+                  await deleteRequest(selectedItem as IapiResponse | ApiResponseArray);
                   autoPageChange();
                 }}
                 color="success"
