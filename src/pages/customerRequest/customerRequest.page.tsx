@@ -46,7 +46,7 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import LastPageIcon from '@mui/icons-material/LastPage';
 import { useSnackbar } from "notistack";
 import {nodatafound} from "../../assets/images";
-import { StyledIconButton, StyledTableCell, CustomEditAddReqDialog, CustomDeleteDialog } from "./cutomerRequest.style";
+import { StyledIconButton, StyledTableCell, CustomEditAddReqDialog, CustomDeleteDialog } from "./cutomerRequestStyle";
 
 
 interface IapiResponse {
@@ -131,7 +131,7 @@ console.log(page)
     </Box>
   );
 }
-export default function CustomerRequest() {
+ function CustomerRequest() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const { enqueueSnackbar } = useSnackbar();
@@ -766,3 +766,5 @@ const autoPageChange=async ()=>{
       </SideBarComponent>
     );
   }
+
+  export default CustomerRequest

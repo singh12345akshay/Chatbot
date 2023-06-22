@@ -1,1 +1,1 @@
-export { default } from "./manageUser";
+export { default } from "./manageUser.page";
