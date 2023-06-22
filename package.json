@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "test":"eslint . --fix",
+    "test": "eslint . --fix",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install" 
+    "prepare": "husky install"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -38,7 +38,7 @@
   "devDependencies": {
     "eslint": "^8.41.0",
     "eslint-plugin-react": "^7.32.2",
-    "prettier": "^2.8.8",
-    "husky": "^8.0.2"
+    "husky": "^8.0.3",
+    "prettier": "^2.8.8"
   }
 }
