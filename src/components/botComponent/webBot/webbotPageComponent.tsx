@@ -17,7 +17,7 @@ export default function BotPageComponent(props: Iprops) {
       {bot && (
         <BackgroundImageWrapper>
           <Image
-            src={bot.imagesrc ? getRandomImage() : bot.imagesrc}
+            src={bot.imagesrc==="" ? getRandomImage() : bot.imagesrc}
             alt="image"
             fill={true}
           />

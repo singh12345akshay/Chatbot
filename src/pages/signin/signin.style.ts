@@ -1,4 +1,4 @@
-import { Box, Button, Card,TextField, styled } from "@mui/material";
+import { Box, Button, Card, TextField, styled } from "@mui/material";
 
 export const LoginPageWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -16,22 +16,28 @@ export const LoginPageWrapper = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const BackgroundImage=styled(Box)(({theme})=>({transform: "scaleX(-1)",position:"absolute",left:"0",height:"100vh",width:"100vw"}))
+export const BackgroundImage = styled(Box)(({ theme }) => ({
+  transform: "scaleX(-1)",
+  position: "absolute",
+  left: "0",
+  height: "100vh",
+  width: "100vw",
+}));
 
 export const BotImage = styled(Box)(({ theme }) => ({
-    position: "absolute",
-    right: "5%",
-    bottom: "50%",
-    transform:"translate(0,48%)",
-    width:theme.spacing(65),
-    height:theme.spacing(65),
+  position: "absolute",
+  right: "5%",
+  bottom: "50%",
+  transform: "translate(0,48%)",
+  width: theme.spacing(65),
+  height: theme.spacing(65),
   [theme.breakpoints.down(1450)]: {
-    width:theme.spacing(56),
-    height:theme.spacing(56)
+    width: theme.spacing(56),
+    height: theme.spacing(56),
   },
   [theme.breakpoints.down("lg")]: {
-    width:theme.spacing(0)
-  }
+    width: theme.spacing(0),
+  },
 }));
 
 export const LoginCard = styled(Card)(({ theme }) => ({
@@ -43,16 +49,16 @@ export const LoginCard = styled(Card)(({ theme }) => ({
   left: "25%",
   position: "absolute",
   transform: "translate(-50%, -50%)",
-  
+
   [theme.breakpoints.down("lg")]: {
-     left:"50%"
+    left: "50%",
   },
   [theme.breakpoints.down("md")]: {
-    left:"50%",
+    left: "50%",
   },
   [theme.breakpoints.down("sm")]: {
     left: "50%",
-    width:"75%"
+    width: "75%",
   },
 }));
 
@@ -74,20 +80,19 @@ export const CustomSignInButton = styled(Button)(({ theme }) => ({
   borderRadius: theme.spacing(0.5),
   width: "fit-content",
   display: "flex",
-  padding : theme.spacing(0.5, 3),
-   '&:hover': {
-          backgroundColor: '#5b6784',
-        },
+  padding: theme.spacing(0.5, 3),
+  "&:hover": {
+    backgroundColor: "#5b6784",
+  },
 }));
 
 export const CustomTextField = styled(TextField)(({ theme }) => ({
   width: "82%",
   margin: theme.spacing(1.5),
   [theme.breakpoints.down("md")]: {
-    width:"90%"
+    width: "90%",
   },
   [theme.breakpoints.down("sm")]: {
-  width:"90%"
+    width: "90%",
   },
-                 
 }));

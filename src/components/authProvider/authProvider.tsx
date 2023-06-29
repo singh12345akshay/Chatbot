@@ -16,9 +16,6 @@ export default function AuthProvider({ children }: AuthproviderProps) {
     const authToken = localStorage.getItem("authToken");
 
     if (!authToken && currentPage !== "/signin") {
-      {
-        console.log("i'm here:", authToken);
-      }
       await router.push("/signin");
       enqueueSnackbar("Please SignIn First", {
         variant: "error",
