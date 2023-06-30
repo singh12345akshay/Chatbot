@@ -4,6 +4,7 @@ import { useState } from "react";
 import { RegexLibrary } from "../../library/Regex";
 
 export default function ManageuserController() {
+  const [isApiPending, SetIsApiPending]=useState(false)
   const [email, setEmail] = useState({
     value: "",
     isValid: true,
@@ -47,6 +48,7 @@ export default function ManageuserController() {
   }
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     try {
+      SetIsApiPending(true)
       const response = await axios.post(
         "https://chatbotapps.mindpath.tech/api/v1/user/signup",
         {
@@ -78,11 +80,13 @@ export default function ManageuserController() {
           vertical: "top",
           horizontal: "center",
         },
+        
       });
     }
+    SetIsApiPending(false)
   };
   return {
-    getters: { email, password, emailHelpertext, passwordHelpertext },
+    getters: { email, password, emailHelpertext, passwordHelpertext,isApiPending },
     handlers: {
       validateEmail,
       handleSubmit,
