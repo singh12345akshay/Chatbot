@@ -3,9 +3,15 @@ import { SelectChangeEvent } from "@mui/material";
 import axios from "axios";
 import { useSnackbar } from "notistack";
 import React, { ChangeEvent, useEffect, useState } from "react";
-import { IUpdateRequest, IRequestData, IapiResponse, ApiResponseArray } from "./interfaces";
+import {
+  IUpdateRequest,
+  IRequestData,
+  IapiResponse,
+  ApiResponseArray,
+} from "./interfaces";
 
 export default function CustomerRequestController() {
+  const [isApiProccesing, setIsApiProccesing] = useState(false);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const { enqueueSnackbar } = useSnackbar();
@@ -56,15 +62,14 @@ export default function CustomerRequestController() {
   }, []);
 
   const addRequest = async (data: IRequestData) => {
+    setIsApiProccesing(true);
     const payload = {
       description: data.description,
       status: data.status,
     };
-    console.log(payload);
     const storedData = localStorage.getItem("authToken");
     if (storedData) {
       const authToken = JSON.parse(storedData);
-
       const response = await fetch(
         "https://chatbotapps.mindpath.tech/api/v1/request/request",
         {
@@ -96,6 +101,7 @@ export default function CustomerRequestController() {
         });
       }
       setDialogOpen(false);
+      setIsApiProccesing(false);
     }
   };
 
@@ -108,7 +114,7 @@ export default function CustomerRequestController() {
     const storedData = localStorage.getItem("authToken");
     if (storedData) {
       const authToken = JSON.parse(storedData);
-
+      setIsApiProccesing(true);
       const response = await fetch(
         "https://chatbotapps.mindpath.tech/api/v1/request/editrequest",
         {
@@ -140,13 +146,14 @@ export default function CustomerRequestController() {
         });
         console.error("Update failed");
       }
-
+      setIsApiProccesing(false);
       setDialogOpen(false);
       setIsEdit(false);
     }
   };
 
   const deleteRequest = async (data: IapiResponse | ApiResponseArray) => {
+    setIsApiProccesing(true);
     const payload: { requestIdList: Array<string> } = {
       requestIdList: [],
     };
@@ -205,6 +212,7 @@ export default function CustomerRequestController() {
       }
       setSelectedItem({});
       setOpenDeleteDialog(false);
+      setIsApiProccesing(false);
     }
   };
 
@@ -284,26 +292,36 @@ export default function CustomerRequestController() {
     }
   };
 
-  return{
-    getters: { page,rowsPerPage,data,isEdit,isLoading,openDeleteDialog,selectedItem,dialogOpen,addRequestDetails,requestDetails
+  return {
+    getters: {
+      page,
+      rowsPerPage,
+      data,
+      isEdit,
+      isLoading,
+      openDeleteDialog,
+      selectedItem,
+      dialogOpen,
+      addRequestDetails,
+      requestDetails,
+      isApiProccesing,
     },
     handlers: {
-        addRequest,
-        handleClose,
-        editRequest,
-        deleteRequest,
-        handleChangeRowsPerPage,
-        handleChangePage,
-        handleDeleteClick,
-        handleDeleteCancel,
-        handleAdd,
-        handleAddDescriptionChange,
-        handleAddStatusChange,
-        handleEdit,
-        handleDescriptionChange,
-        handleStatusChange,
-        autoPageChange
-
-    }
-};
+      addRequest,
+      handleClose,
+      editRequest,
+      deleteRequest,
+      handleChangeRowsPerPage,
+      handleChangePage,
+      handleDeleteClick,
+      handleDeleteCancel,
+      handleAdd,
+      handleAddDescriptionChange,
+      handleAddStatusChange,
+      handleEdit,
+      handleDescriptionChange,
+      handleStatusChange,
+      autoPageChange,
+    },
+  };
 }

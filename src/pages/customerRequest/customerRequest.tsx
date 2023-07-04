@@ -23,7 +23,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 
-import React, {  } from "react";
+import React from "react";
 import { useTheme } from "@mui/material/styles";
 import Image from "next/image";
 import SideBarComponent from "src/components/sideBar/sideBarComponent";
@@ -44,7 +44,6 @@ import TablePaginationActions from "src/components/tablePagination/tablePaginati
 import Head from "next/head";
 
 function CustomerRequest() {
-  const theme = useTheme();
   const { getters, handlers } = CustomerRequestController();
   const {
     page,
@@ -57,6 +56,7 @@ function CustomerRequest() {
     dialogOpen,
     addRequestDetails,
     requestDetails,
+    isApiProccesing,
   } = getters;
   const {
     addRequest,
@@ -317,6 +317,7 @@ function CustomerRequest() {
                 <Button
                   variant="contained"
                   color="success"
+                  disabled={isApiProccesing}
                   onClick={() => {
                     editRequest(requestDetails);
                   }}
@@ -332,6 +333,7 @@ function CustomerRequest() {
                 <Button
                   variant="contained"
                   color="success"
+                  disabled={isApiProccesing}
                   onClick={() => {
                     addRequest(addRequestDetails);
                   }}
@@ -381,6 +383,7 @@ function CustomerRequest() {
 
               <Button
                 variant="contained"
+                disabled={isApiProccesing}
                 onClick={async () => {
                   await deleteRequest(
                     selectedItem as IapiResponse | ApiResponseArray

@@ -13,6 +13,12 @@ import ManageuserController from "./manageuser.controller";
 
 export default function ManageUser() {
   const { getters, handlers } = ManageuserController();
+  const { email, password, emailHelpertext, passwordHelpertext,isApiPending }=getters;
+  const {
+    validateEmail,
+    handleSubmit,
+    validatePassword,
+  }=handlers;
   const home = useSelector((state) => state);
 
   return (
@@ -39,10 +45,10 @@ export default function ManageUser() {
                 variant="standard"
                 autoComplete="off"
                 fullWidth
-                onChange={handlers.validateEmail}
-                value={getters.email.value}
-                error={!getters.email.isValid}
-                helperText={getters.emailHelpertext}
+                onChange={validateEmail}
+                value={email.value}
+                error={!email.isValid}
+                helperText={emailHelpertext}
               />
             </Box>
             <Box>
@@ -55,22 +61,25 @@ export default function ManageUser() {
                 type="password"
                 variant="standard"
                 fullWidth
-                onChange={handlers.validatePassword}
-                value={getters.password.value}
-                error={!getters.password.isValid}
-                helperText={getters.passwordHelpertext}
+                onChange={validatePassword}
+                value={password.value}
+                error={!password.isValid}
+                helperText={passwordHelpertext}
               />
             </Box>
             <Box>
               <CustomSignInButton
                 variant="contained"
                 type="submit"
-                onClick={handlers.handleSubmit}
                 disabled={
-                  getters.email.isValid && getters.password.isValid
+                  !isApiPending &&
+                  email.isValid && password.isValid
                     ? false
                     : true
-                }>
+                    
+                }
+                onClick={handleSubmit}
+                >
                 Add User
               </CustomSignInButton>
             </Box>
