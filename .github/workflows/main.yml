@@ -33,17 +33,10 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             ls  /home/ec2-user/
-          run: |
-              cd /home/ec2-user/Chatbot &&
-              git checkout main &&
-              git fetch --all &&
-              git reset --hard origin/main &&
-              git pull origin main &&
-              sudo npm i &&
-              sudo npm run build &&
-              sudo pm2 stop ./dist/index.js &&
-              sudo pm2 start ./dist/index.js
-              '
+            git clone https://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@github.com/singh12345akshay/Chatbot.git
+            cd /home/ec2-user/Chatbot && sudo npm i && sudo npm run build &&
+            nohup npm start &
+              
             
       # - name: Executing remote ssh commands using ssh key
       #   uses: appleboy/ssh-action@master
