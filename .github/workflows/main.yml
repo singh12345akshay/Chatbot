@@ -33,8 +33,8 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             ls  /home/ec2-user/
-            git clone https://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@github.com/singh12345akshay/Chatbot.git
-            cd /home/ec2-user/Chatbot && sudo npm i && sudo npm run build &&
+            git clone https://${{secret.PAT}}@github.com/singh12345akshay/Chatbot.git
+            cd /home/ec2-user/chatbot-site-nextjs && sudo npm i && sudo npm run build &&
             nohup npm start &
               
             
