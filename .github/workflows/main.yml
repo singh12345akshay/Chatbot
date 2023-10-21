@@ -37,7 +37,7 @@ jobs:
             cd /home/ec2-user/Chatbot  
             npm i
             npm run build
-            nohup npm start 
+            nohup npm start &
               
             
       # - name: Executing remote ssh commands using ssh key
