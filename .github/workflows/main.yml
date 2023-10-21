@@ -35,6 +35,7 @@ jobs:
             ls  /home/ec2-user/
             git clone https://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@github.com/singh12345akshay/Chatbot.git
             cd /home/ec2-user/Chatbot  
+            nvm use 18
             npm i
             npm run build
             nohup npm start &
