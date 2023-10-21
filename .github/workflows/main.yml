@@ -33,14 +33,25 @@ jobs:
       #     port: ${{ secrets.PORT }}
       #     script: |
       #       cd  /home/ubuntu/Chatbot/;
-
-      - name: Deploy to Server 1
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          REMOTE_HOST: ${{ secrets.EC2_HOST }}
-          REMOTE_USER: ${{ secrets.EC2_USERNAME }}
-          TARGET: "home/ec2-user/app"
+      - name: Executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd ~/home/ec2-user/Chatbot/Chatbot
+            yarn/npm install
+            yarn/npm build
+            yarn/npm i serve
+            serve -p 3000 build/
+      # - name: Deploy to Server 1
+      #   uses: easingthemes/ssh-deploy@main
+      #   env:
+      #     SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+      #     REMOTE_HOST: ${{ secrets.EC2_HOST }}
+      #     REMOTE_USER: ${{ secrets.EC2_USERNAME }}
+      #     TARGET: "home/ec2-user/app"
       # - name: Deploy to my EC2 instance
       #   uses: easingthemes/ssh-deploy@v2.1.5
       #   env:
