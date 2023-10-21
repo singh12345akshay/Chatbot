@@ -38,7 +38,7 @@ jobs:
             cd /home/ec2-user/Chatbot  
             # nvm use 18
             npm i
-            npm run build
+            next build
             nohup npm start &
               
             
