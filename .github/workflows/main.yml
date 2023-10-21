@@ -13,16 +13,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install Node.js and npm
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
+      # - name: Install Node.js and npm
+      #   uses: actions/setup-node@v2
+      #   with:
+      #     node-version: 18
 
-      - name: Install project dependencies
-        run: npm install
+      # - name: Install project dependencies
+      #   run: npm install
 
-      - name: Build project
-        run: npm run build
+      # - name: Build project
+      #   run: npm run build
 
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v0.1.5
@@ -33,7 +33,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             ls  /home/ec2-user/
-          run: 
+          run: |
               cd /home/ec2-user/Chatbot &&
               git checkout main &&
               git fetch --all &&
